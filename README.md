@@ -1,5 +1,5 @@
 # SYSTEM-FOR-RURAL-STUDENTS
-This project introduces a comprehensive educational platform aimed at improving student learning through the use of interactive digital tools, engaging gamified lessons, and introductory robotics education. Special emphasis is placed on inclusivity, with support for offline access to accommodate students in areas with limited internet connectivity. A built-in OTP-based parental notification system ensures responsible screen time by alerting guardians whenever gamified content is accessed.
+This group project introduces a comprehensive educational platform aimed at improving student learning through the use of interactive digital tools, engaging gamified lessons, and introductory robotics education. Special emphasis is placed on inclusivity, with support for offline access to accommodate students in areas with limited internet connectivity. A built-in OTP-based parental notification system ensures responsible screen time by alerting guardians whenever gamified content is accessed.
 
 🚀 Key Features
 🧑‍🏫 User Login System: Secure registration and authentication powered by Python and MySQL
