@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.login-button {
+    background-color: #ec407a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('aboutt.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.hero-content {
+    position: relative;
+    color: black;
+    z-index: 1;
+    text-align: justify; /* This centers the text horizontally */
+    max-width: 80%; /* Optional: Restrict width for better readability */
+    margin: 0 auto; /* Centers the content container */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.btn {
+    background-color: #ec407a;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Services Section */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+    background-size: cover;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 30%;
+    padding: 1rem;
+    background-color: #ec407a;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    background-color: #d81b60;
+}
+
+/* Wrapper for additional features */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000000;
+    padding-top: 35px;
+    font-family: 'roboto', sans-serif;
+}
+
+.wrapper h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    padding: 5px 15px;
+    color: white;
+}
+
+.content-box {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 35px;
+}
+
+.card {
+    min-height: 220px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    margin: 10px 6px;
+    transition: 0.3s;
+}
+
+.card i {
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    color: #6c757d;
+    text-align: center;
+}
+
+.card:hover {
+    background: linear-gradient(90deg, rgba(2, 2, 36, 0.7) 0%, rgba(9, 9, 221, 0.7) 35%, rgba(0, 212, 225, 0.7) 100%), url("../static/images/image.png");
+    opacity: 0.7;
+    color: #fff;
+}
+
+.card:hover p {
+    color: #fff;
+}
+
+.card:hover i {
+    color: white;
+}
+
+.card:nth-child(2):hover {
+    background: linear-gradient(90deg, rgba(2, 2, 36, 0.7) 0%, rgba(9, 9, 221, 0.7) 35%, rgba(0, 212, 225, 0.7) 100%), url('sj.jpg');
+}
+
+/* Footer Section */
+footer {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grammar Sorting Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='english.css') }}">
+</head>
+<body>
+  <h1>🎯 Grammar Sorting Game</h1>
+  <p>Drag each word to the correct category: <strong>Noun, Verb, or Adjective</strong>.</p>
+
+  <div class="word-bank">
+    <div class="word" draggable="true">run</div>
+    <div class="word" draggable="true">dog</div>
+    <div class="word" draggable="true">happy</div>
+    <div class="word" draggable="true">eat</div>
+    <div class="word" draggable="true">car</div>
+    <div class="word" draggable="true">blue</div>
+  </div>
+
+  <div class="categories">
+    <div class="category" data-type="noun">
+      <h3>Nouns</h3>
+      <div class="bucket" ondragover="dragOver(event)" ondrop="drop(event)"></div>
+    </div>
+    <div class="category" data-type="verb">
+      <h3>Verbs</h3>
+      <div class="bucket" ondragover="dragOver(event)" ondrop="drop(event)"></div>
+    </div>
+    <div class="category" data-type="adjective">
+      <h3>Adjectives</h3>
+      <div class="bucket" ondragover="dragOver(event)" ondrop="drop(event)"></div>
+    </div>
+  </div>
+
+  <button onclick="checkAnswers()">Check Answers</button>
+  <p id="result"></p>
+
+  <script src="{{ url_for('static', filename='js/english.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Quiz Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='games2.css') }}">
+</head>
+
+<body>
+  <div class="quiz-container">
+    <h1>Math Quiz</h1>
+    <p id="question">Question will appear here</p>
+    <input type="number" id="answer" placeholder="Your answer" />
+    <br /><br />
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/games2.js') }}"></script>
+</body>
+
+</html>

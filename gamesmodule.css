@@ -1,0 +1,138 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #d32f2f;
+}
+
+/* Section */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.custom-heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #d84315;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid Layout */
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Columns */
+.service-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Cards */
+.service-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.service-item h2 {
+    color: #1976d2;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    border-top: 1px solid #ccc;
+    margin-top: 3rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .service-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-heading {
+        font-size: 2rem;
+    }
+
+    .service-item h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-item p {
+        font-size: 0.95rem;
+    }
+}

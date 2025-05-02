@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Learning Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='learningmodule.css') }}">
+</head>
+<body>
+    <h1>Welcome to Gamified Learning</h1>
+    <p>Select a subject to start learning:</p>
+    <ul>
+        <li><a href="{{ url_for('science') }}">Science</a></li>
+        <li><a href="{{ url_for('maths') }}">Maths</a></li>
+        <li><a href="{{ url_for('english') }}">English</a></li>
+        <li><a href="{{ url_for('evs') }}">EVS</a></li>
+        <li><a href="{{ url_for('gk') }}">GK</a></li>
+    </ul>
+</body>
+</html>

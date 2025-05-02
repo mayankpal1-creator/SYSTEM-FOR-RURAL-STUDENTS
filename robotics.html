@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='robotics.css') }}">
+
+</head>
+<body>
+
+    <h1 class="main-heading">📚 Explore, Learn, Innovate: Master Robotics Components! 🎓</h1>
+
+    <div class="container">
+        <h2>Hands-on Learning for the Future of Automation!</h2>
+        <div class="flashcard" onclick="flipCard()">
+            <img id="flashcardImage" src="" alt="Flashcard Image">
+            <p id="flashcardText">Click to reveal answer</p>
+        </div>
+        <button class="btn" onclick="nextCard()">Next</button>
+    </div>
+
+    <script>
+        const flashcards = [
+            { 
+                question: "ARDUINO UNO", 
+                answer: "Arduino Uno is an open-source microcontroller board based on the ATmega328P, used for building electronics projects. It features digital and analog I/O pins, a USB interface, and supports easy programming via the Arduino IDE.", 
+                image: "{{ url_for('static', filename='images/arduino.png') }}"
+
+            },
+            { 
+                question: "ULTRASONIC SENSOR", 
+                answer: "An ultrasonic sensor measures distance by emitting ultrasonic waves and detecting their reflection from an object. It is commonly used in robotics for obstacle detection, distance measurement, and automation projects.", 
+                image: "{{ url_for('static', filename='images/ultrasonic.png') }}"
+
+            },
+            { 
+                question: "BREADBOARD", 
+                answer: "A breadboard is a reusable platform for prototyping electronic circuits without soldering. It allows easy connection of components using pre-drilled holes and internal conductive strips for quick experimentation and testing.", 
+                image: "{{ url_for('static', filename='images/breadboard.png') }}"
+
+            },
+            { 
+                question: "IR SENSOR", 
+                answer: "An IR (Infrared) sensor detects objects and measures distance using infrared radiation. It is commonly used in proximity detection, obstacle avoidance, and line-following robots.", 
+                image: "{{ url_for('static', filename='images/irsensor.png') }}"
+
+            }
+        ];
+
+        let currentIndex = 0;
+        let showAnswer = false;
+        const flashcardText = document.getElementById("flashcardText");
+        const flashcardImage = document.getElementById("flashcardImage");
+
+        function flipCard() {
+            showAnswer = !showAnswer;
+            flashcardText.textContent = showAnswer ? flashcards[currentIndex].answer : flashcards[currentIndex].question;
+        }
+
+        function nextCard() {
+            showAnswer = false;
+            currentIndex = (currentIndex + 1) % flashcards.length;
+            flashcardText.textContent = flashcards[currentIndex].question;
+            flashcardImage.src = flashcards[currentIndex].image;
+        }
+
+        // Load the first question
+        nextCard();
+    </script>
+
+</body>
+</html>

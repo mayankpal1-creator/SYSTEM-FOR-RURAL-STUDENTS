@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monument Matching Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='gk.css') }}">
+</head>
+<body>
+  <h2>🏛️ Match the Monuments to Their States or Districts</h2>
+
+  <div class="states">
+    <div class="state" data-state="Uttar Pradesh" ondragover="allowDrop(event)" ondrop="drop(event)">Uttar Pradesh</div>
+    <div class="state" data-state="Delhi" ondragover="allowDrop(event)" ondrop="drop(event)">Delhi</div>
+    <div class="state" data-state="Tamil Nadu" ondragover="allowDrop(event)" ondrop="drop(event)">Tamil Nadu</div>
+    <div class="state" data-state="Maharashtra" ondragover="allowDrop(event)" ondrop="drop(event)">Maharashtra</div>
+    <div class="state" data-state="Karnataka" ondragover="allowDrop(event)" ondrop="drop(event)">Karnataka</div>
+    <div class="state" data-state="Rajasthan" ondragover="allowDrop(event)" ondrop="drop(event)">Rajasthan</div>
+    <div class="state" data-state="West Bengal" ondragover="allowDrop(event)" ondrop="drop(event)">West Bengal</div>
+    <div class="state" data-state="Telangana" ondragover="allowDrop(event)" ondrop="drop(event)">Telangana</div>
+  </div>
+
+  <div class="monuments">
+    <img src="{{ url_for('static', filename='images/tajmahal.png') }}" id="Taj Mahal" draggable="true" ondragstart="drag(event)" data-state="Uttar Pradesh">
+    <img src="{{ url_for('static', filename='images/indiagate.png') }}" id="India Gate" draggable="true" ondragstart="drag(event)" data-state="Delhi">
+    <img src="{{ url_for('static', filename='images/charminar.png') }}" id="Charminar" draggable="true" ondragstart="drag(event)" data-state="Telangana">
+    <img src="{{ url_for('static', filename='images/gateway.png') }}" id="Gateway of India" draggable="true" ondragstart="drag(event)" data-state="Maharashtra">
+    <img src="{{ url_for('static', filename='images/victoriamemorial.png') }}" id="Victoria Memorial" draggable="true" ondragstart="drag(event)" data-state="West Bengal">
+    <img src="{{ url_for('static', filename='images/meenakshi.png') }}" id="Meenakshi Temple" draggable="true" ondragstart="drag(event)" data-state="Tamil Nadu">
+    <img src="{{ url_for('static', filename='images/hampi.png') }}" id="Hampi" draggable="true" ondragstart="drag(event)" data-state="Karnataka">
+    <img src="{{ url_for('static', filename='images/hawamahal.png') }}" id="Hawa Mahal" draggable="true" ondragstart="drag(event)" data-state="Rajasthan">
+  </div>
+
+  <button onclick="checkAnswer()">Check Answer</button>
+  <p id="result"></p>
+
+  <script src="{{ url_for('static', filename='js/gk.js') }}"></script>
+</body>
+</html>

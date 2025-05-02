@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUQUESTHUB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="EDUQUESTHUB"> <!-- Add your logo here -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('about') }}">ABOUT US</a></li>
+                <li><a href="{{ url_for('services') }}">SERVICES</a></li>
+                <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+                <li><a href="{{ url_for('login') }}">LOGIN</a></li>
+            </ul>
+            <a href="{{ url_for('login') }}"><button class="login-button">LOGIN</button></a>
+            
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>ABOUT US</h1>
+            <h3>Welcome to Digi Shiksha, a comprehensive platform designed to revolutionize the way students learn, engage, and succeed academically. In today's digital age, we understand the importance of having seamless access to educational resources, whether online or offline. Our portal provides an all-in-one solution where students can submit assignments, attempt quizzes, download study materials, and track their academic progress with ease.
+                <br>
+
+            Our mission is to bridge the gap between students and quality education by offering a user-friendly and interactive learning environment. Whether you are preparing for exams, revising important topics, or submitting coursework, our platform ensures that education remains uninterrupted and accessible from anywhere. With offline capabilities, students can continue learning even in areas with limited internet access, making our portal an inclusive and effective tool for academic growth.
+                <br>
+
+            We are committed to enhancing the student experience by integrating smart technologies that simplify learning and performance tracking. By fostering an ecosystem where students can collaborate, stay organized, and achieve their educational goals, we aim to empower learners with the tools they need to excel in their academic journey. Join us in making education smarter, more engaging, and more accessible for all.
+                <br></h3>
+            <button class="btn">Learn More</button>
+        </div>
+    </section>
+
+   
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DIGI SHIKSHA. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

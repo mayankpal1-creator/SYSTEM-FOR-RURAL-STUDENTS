@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-section">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/user.png" alt="User Icon">
+        <h2>Let’s Make a Happy Journey!</h2>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h3>Create An Account</h3>
+      <form method="POST" action="{{ url_for('signup') }}">
+        <label for="email">Email:</label>  <!-- Changed from username to email -->
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+    
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>  <!-- Full Name field -->
+    
+        <button type="submit">Sign Up</button>
+    </form>
+    
+    </div>
+  </div>
+
+</body>
+</html>

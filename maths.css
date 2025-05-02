@@ -1,0 +1,54 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: radial-gradient(circle at center, #fffde7, #ffe082);
+  text-align: center;
+  padding: 30px;
+  color: #d84315;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e65100;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #bf360c;
+}
+
+/* Dropdown and button styling */
+#fractionSelect {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #f57c00;
+  background-color: #ffe0b2;
+  color: #e65100;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f4511e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d84315;
+}
+
+/* Pizza canvas */
+#pizzaCanvas {
+  margin-top: 30px;
+  border: 6px dashed #ff7043;
+  border-radius: 50%;
+  background-color: #fff3e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}

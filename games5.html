@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Map Quiz</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='games5.css') }}">
+</head>
+
+<body>
+
+    <h1>Geography Map Quiz</h1>
+    <div class="container">
+        <p>Click on the correct country for: <strong id="targetCountry"></strong></p>
+        <p>Score: <span id="score">0</span></p>
+
+        <div class="map-area">
+            <img src="{{ url_for('static', filename='images/Blank-World-Map-with-Oceans-2048x1180.jpg') }}" alt="World Map">
+
+            <div class="clickable" id="brazil" style="top: 50%; left: 29%;" onclick="checkAnswer('Brazil')"></div>
+            <div class="clickable" id="usa" style="top: 23%; left: 18%;" onclick="checkAnswer('USA')"></div>
+            <div class="clickable" id="india" style="top: 32%; left: 60%;" onclick="checkAnswer('India')"></div>
+            <div class="clickable" id="france" style="top: 20%; left: 42%;" onclick="checkAnswer('France')"></div>
+        </div>
+
+        <p id="result"></p>
+        <button onclick="nextQuestion()">Next Country</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/games5.js') }}"></script>
+
+</body>
+
+</html>

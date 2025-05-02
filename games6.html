@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='games6.css') }}">
+</head>
+<body>
+
+    <h1>Science Quiz Game</h1>
+    <div class="container">
+        <p class="question" id="question"></p>
+        <button class="option" onclick="checkAnswer(0)"></button>
+        <button class="option" onclick="checkAnswer(1)"></button>
+        <button class="option" onclick="checkAnswer(2)"></button>
+        <button class="option" onclick="checkAnswer(3)"></button>
+        <p id="result"></p>
+        <p>Score: <span id="score">0</span></p>
+        <button onclick="nextQuestion()">Next Question</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/games6.js') }}"></script>
+
+</body>
+</html>

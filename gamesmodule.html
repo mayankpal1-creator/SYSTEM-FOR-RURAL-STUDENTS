@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGI SHIKSHA</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='gamesmodule.css') }}">
+</head>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DIGI SHIKSHA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="about">ABOUT US</a></li>
+                <li><a href="service">SERVICES</a></li>
+                <li><a href="contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="custom-heading">GAMES MODULE</div>
+        <div class="service-grid">
+            <div class="service-column">
+                <a href="{{ url_for('otp') }}?next=games1" style="text-decoration: none;">
+
+                    <div class="service-item">
+                        <h2>MEMORY MATCH GAME</h2>
+                        <p>Test and improve your memory by matching pairs of icons.</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('games2') }}" style="text-decoration: none;">
+                    <div class="service-item">
+                        <h2>MATHS QUIZ</h2>
+                        <p>Sharpen your mathematical skills with this interactive quiz.
+                            Solve arithmetic, algebra, and logic-based problems.
+                            Suitable for students of all levels to practice calculations.</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('games3') }}" style="text-decoration: none;">
+                    <div class="service-item">
+                        <h2>PERIODIC TABLE</h2>
+                        <p>Explore elements and their properties in a fun way.
+                            Learn atomic numbers, symbols, and chemical properties.
+                            Great for chemistry enthusiasts and students alike.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="service-column">
+                <a href="{{ url_for('games4') }}" style="text-decoration: none;">
+                    <div class="service-item">
+                        <h2>SPELLING BEE GAME</h2>
+                        <p>Improve your vocabulary and spelling skills through challenges.
+                            Listen to words and type the correct spellings.
+                            Helps students prepare for spelling competitions.</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('games5') }}" style="text-decoration: none;">
+                    <div class="service-item">
+                        <h2>GEOGRAPHY MAP QUIZ</h2>
+                        <p>Test your geography knowledge with this map-based quiz.
+                            Identify countries, capitals, and landmarks.
+                            A great way to enhance your global awareness.</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('games6') }}" style="text-decoration: none;">
+                    <div class="service-item">
+                        <h2>SCIENCE QUIZ</h2>
+                        <p>Engage in a fun and informative science-based quiz.
+                            Cover topics like physics, biology, and space exploration.
+                            Helps students reinforce key scientific concepts.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DIGI SHIKSHA. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

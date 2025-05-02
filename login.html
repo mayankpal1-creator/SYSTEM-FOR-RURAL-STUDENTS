@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <div class="left-section">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/user.png" alt="User Icon">
+        <h2>Welcome Back!</h2>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h3>Login to Your Account</h3>
+      <form method="POST" action="{{ url_for('login') }}">
+        <label for="email">Email:</label>  <!-- Changed from username to email -->
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+    
+        <button type="submit">Login</button>
+    </form>
+    
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Fraction Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='maths.css') }}">
+</head>
+<body>
+  <h2>🍕 Slice the Pizza!</h2>
+  <p>Select a fraction to slice:</p>
+
+  <select id="fractionSelect">
+    <option value="2">1/2</option>
+    <option value="3">1/3</option>
+    <option value="4">1/4</option>
+    <option value="6">1/6</option>
+  </select>
+  <button onclick="slicePizza()">Slice</button>
+
+  <canvas id="pizzaCanvas" width="400" height="400"></canvas>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

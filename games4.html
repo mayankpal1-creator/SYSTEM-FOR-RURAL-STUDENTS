@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spelling Bee Game</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='games4.css') }}">
+</head>
+
+<body>
+  <h1>Spelling Bee Game</h1>
+  <div class="container">
+    <p>Click the button to hear the word:</p>
+    <button onclick="speakWord()">🔊 Speak</button>
+    <br><br>
+    <input type="text" id="userInput" placeholder="Type the spelling..." />
+    <button onclick="checkSpelling()">Submit</button>
+    <p id="result"></p>
+    <p>Score: <span id="score">0</span></p>
+    <button onclick="nextWord()">Next Word</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/games4.js') }}"></script>
+</body>
+
+</html>

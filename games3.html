@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Periodic Table Puzzle Game</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='games3.css') }}">
+</head>
+
+<body>
+  <h1>Periodic Table Puzzle Game</h1>
+  <p class="instructions">Click on the correct symbol for the element: <span id="current-element"></span></p>
+  <div class="game-board" id="gameBoard"></div>
+
+  <script src="{{ url_for('static', filename='js/games3.js') }}"></script>
+</body>
+
+</html>

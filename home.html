@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> DIGI SHIKSHA </title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+</head>
+<body>
+ 
+<!-- NAVIGATION -->
+<nav> 
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt=" ">
+<div class="box">
+<form>
+<input type= "text" placeholder= "Search...">
+</div>
+<div class="navigation">
+<ul>
+<li><a href="{{ url_for('home') }}">HOME</a></li>
+<li><a href="{{ url_for('about') }}">ABOUT</a></li>
+<li><a href="{{ url_for('services') }}">SERVICES</a></li>
+<li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+</ul>
+</div>
+</nav>
+<section id="home">
+<h2>Creating a path for betterment <br> </h2>
+<p>
+We aim to make a difference for better future of India.
+</p>
+<div class="btn">
+<a class="blue" href="{{ url_for('about') }}">Learn More</a>
+<a class="yellow" href="{{ url_for('login') }}">LOGIN</a>
+</div>
+</section>
+</nav>
+</body>
+</html>

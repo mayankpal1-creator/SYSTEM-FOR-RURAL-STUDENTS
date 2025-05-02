@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side Image -->
+        <div class="left"></div>
+
+        <!-- Right Side Contact Form -->
+        <div class="right">
+            <h1>Contact Us</h1>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Contact Us</button>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <p><strong>Contact:</strong> digi@shiksha.com</p>
+                <p><strong>Based in:</strong> Agra, UP</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <a href="#"><b>📘</b></a>
+                <a href="#"><b>📸</b></a>
+                <a href="#"><b>🐦</b></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

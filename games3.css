@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    padding: 20px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  
+  .element {
+    width: 100px;
+    height: 100px;
+    background-color: #1e90ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .element.correct {
+    background-color: #32cd32;
+    cursor: default;
+  }
+  
+  .instructions {
+    margin: 20px;
+    font-size: 18px;
+  }
+  

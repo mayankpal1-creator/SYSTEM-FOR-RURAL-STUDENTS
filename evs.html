@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habitat Matching Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='evs.css') }}">
+</head>
+<body>
+  <h2>🌍 Drag the animals into their correct habitat!</h2>
+  <div class="habitats">
+    <div class="habitat" id="forest" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p>🌳 Forest</p>
+      <img src="{{ url_for('static', filename='images/forest.png') }}" class="habitat-img">
+    </div>
+    <div class="habitat" id="desert" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p>🏜️ Desert</p>
+      <img src="{{ url_for('static', filename='images/desert.png') }}" class="habitat-img">
+    </div>
+    <div class="habitat" id="ocean" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p>🌊 Ocean</p>
+      <img src="{{ url_for('static', filename='images/ocean.png') }}" class="habitat-img">
+    </div>
+  </div>
+
+  <div class="animals">
+    <img src="{{ url_for('static', filename='images/lion.png') }}" draggable="true" ondragstart="drag(event)" id="lion" data-habitat="forest">
+    <img src="{{ url_for('static', filename='images/camel.png') }}" draggable="true" ondragstart="drag(event)" id="camel" data-habitat="desert">
+    <img src="{{ url_for('static', filename='images/shark.png') }}" draggable="true" ondragstart="drag(event)" id="shark" data-habitat="ocean">
+  </div>
+
+  <div id="feedback"></div>
+
+  <script src="{{ url_for('static', filename='js/evs.js') }}"></script>
+</body>
+</html>

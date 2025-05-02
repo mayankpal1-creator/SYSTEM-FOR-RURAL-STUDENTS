@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Study Planner</title>
+  <script>
+    function updateSubjects() {
+      const syllabus = {{ syllabus | tojson }};
+      const selectedClass = document.getElementById('class').value;
+      const subjectsDiv = document.getElementById('subjects');
+
+      subjectsDiv.innerHTML = ''; // Clear previous subjects
+
+      const subjects = Object.keys(syllabus[selectedClass]);
+      subjects.forEach(subject => {
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.name = 'subjects';
+        checkbox.value = subject;
+
+        const label = document.createElement('label');
+        label.textContent = subject;
+
+        subjectsDiv.appendChild(checkbox);
+        subjectsDiv.appendChild(label);
+        subjectsDiv.appendChild(document.createElement('br'));
+      });
+    }
+  </script>
+</head>
+<body>
+  <h2>AI Study Planner (Class 1–8)</h2>
+  <form method="POST" action="/generate">
+    <label>Select Class:</label>
+    <select name="class" id="class" onchange="updateSubjects()">
+      {% for cls in classes %}
+      <option value="{{ cls }}">{{ cls }}</option>
+      {% endfor %}
+    </select><br><br>
+
+    <div id="subjects">
+      <!-- Subjects will load here -->
+    </div>
+
+    <label>Total Hours Per Week:
+      <input type="number" name="hours" required>
+    </label><br><br>
+
+    <label>Total Number of Weeks:
+      <input type="number" name="weeks" required>
+    </label><br><br>
+
+    <button type="submit">Generate Plan</button>
+  </form>
+
+  <script>updateSubjects();</script>
+</body>
+</html>

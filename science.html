@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Science Module</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='science.css') }}">
+</head>
+<body>
+  <h2>Photosynthesis Drag and Drop</h2>
+  <p>Drag the steps in the correct order:</p>
+
+  <div class="container">
+    <div id="steps">
+      <div class="draggable" draggable="true">Absorbs sunlight</div>
+      <div class="draggable" draggable="true">Takes in CO₂</div>
+      <div class="draggable" draggable="true">Takes in water from roots</div>
+      <div class="draggable" draggable="true">Releases oxygen</div>
+    </div>
+
+    <div id="target-box">
+      <p>Drop here in correct order</p>
+    </div>
+  </div>
+
+  <button id="checkOrder">Check Answer</button>
+  <p id="resultMessage"></p>
+
+  <script src="{{ url_for('static', filename='js/dragdrop.js') }}"></script>
+</body>
+</html>

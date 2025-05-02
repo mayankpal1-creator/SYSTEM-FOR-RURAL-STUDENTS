@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGI SHIKSHA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='account.css') }}">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="DIGI SHIKSHA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('about') }}">ABOUT US</a></li>
+                <li><a href="{{ url_for('services') }}">SERVICES</a></li>
+                <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+                <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="section">
+        <div class="custom-heading">HELLO  {{ name }} !  WELCOME TO DIGI SHIKSHA</div>
+        <br>
+        <h1 style="color: white;">LET'S BEGIN OUR SPECIAL JOURNEY!</h1>
+        <br>
+
+        <!-- Box Row Section -->
+        <div class="box-row">
+            <a href="{{ url_for('learningmodule') }}" style="text-decoration: none;">
+                <div class="box">
+                    <h3>LEARNING CONTENT</h3>
+                    <p>A structured repository of educational games and quizzes. It ensures comprehensive and engaging learning experiences for students.</p>
+                </div>
+            </a>
+            <a href="{{ url_for('gamesmodule') }}" style="text-decoration: none;">
+                <div class="box">
+                    <h3>GAMES</h3>
+                    <p>An interactive learning space where students engage in educational games. These games reinforce concepts, improve problem-solving skills, and make learning fun.</p>
+                </div>
+            </a>
+            <a href="{{ url_for('robotics') }}" style="text-decoration: none;">
+                <div class="box">
+                    <h3>ROBOTICS LEARNING</h3>
+                    <p>A hands-on module that teaches students about robotics components, and automation.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 DIGI SHIKSHA. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
